@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Form view for "model" -->
+    <record id="view_new_ticket_from_tags_form" model="ir.ui.view">
+        <field name="name">view.create_new_ticket_from_tag.form</field>
+        <field name="model">new.ticket.from.tag</field>
+        <field name="arch" type="xml">
+            <form string="Create a new ticket">
+               
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="user_id"/>
+                        <field name="tag_id" 
+                        options="{ 'no_open': True}"
+                        />
+                    
+
+                    </group>
+                    <footer>
+                        <button name="create_ticket" string="Create ticket" type="object" class="btn-primary"/>
+                        or
+                        <button string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+              
+            </form>
+        </field>
+    </record>
+
+    
+    <!-- Main window action for "model" -->
+    <record id="new_ticket_from_tags_action" model="ir.actions.act_window">
+        <field name="name">Actions</field>
+        <field name="res_model">new.ticket.from.tag</field>
+        <field name="view_mode">form</field>
+        <field name="target" >new</field>
+
+    </record>
+    
+ 
+    
+
+</odoo>

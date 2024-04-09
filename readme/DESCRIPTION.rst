@@ -1,0 +1,1 @@
+this module adds helpdesk functionality in Odoo
